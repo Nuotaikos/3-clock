@@ -17,7 +17,7 @@ body {
   min-height: 100vh;
   overflow: hidden;
 }
-.laikrodis {
+.clock {
   width: 350px;
   height: 350px;
   background-color: rgb(255, 255, 255, 0.6);
@@ -27,7 +27,7 @@ body {
   font-size: 30px;
   box-shadow: 0 0 25px grey;
 }
-.laikrodis .number {
+.clock .number {
   --rotation: 0;
   position: absolute;
   width: 100%;
@@ -35,43 +35,43 @@ body {
   text-align: center;
   transform: rotate(var(--rotation));
 }
-.laikrodis .number1 {
+.clock .number1 {
   --rotation: 30deg;
 }
-.laikrodis .number2 {
+.clock .number2 {
   --rotation: 60deg;
 }
-.laikrodis .number3 {
+.clock .number3 {
   --rotation: 90deg;
 }
-.laikrodis .number4 {
+.clock .number4 {
   --rotation: 120deg;
 }
-.laikrodis .number5 {
+.clock .number5 {
   --rotation: 150deg;
 }
-.laikrodis .number6 {
+.clock .number6 {
   --rotation: 180deg;
 }
-.laikrodis .number7 {
+.clock .number7 {
   --rotation: 210deg;
 }
-.laikrodis .number8 {
+.clock .number8 {
   --rotation: 240deg;
 }
-.laikrodis .number9 {
+.clock .number9 {
   --rotation: 270deg;
 }
-.laikrodis .number10 {
+.clock .number10 {
   --rotation: 300deg;
 }
-.laikrodis .number11 {
+.clock .number11 {
   --rotation: 330deg;
 }
-.laikrodis .number12 {
+.clock .number12 {
   --rotation: 360deg;
 }
-.laikrodis::after {
+.clock::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -83,7 +83,7 @@ body {
   transform: translate(-50%, -50%);
   z-index: 12;
 }
-.laikrodis .rodykle {
+.clock .hand {
   --rotation: 0;
   position: absolute;
   bottom: 50%;
@@ -95,17 +95,17 @@ body {
   z-index: 10;
   transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
 }
-.laikrodis .rodykle.sekundes {
+.clock .hand.second {
   width: 5px;
   height: 45%;
   background-color: red;
 }
-.laikrodis .rodykle.minutes {
+.clock .hand.minute {
   width: 8px;
   height: 40%;
   background-color: black;
 }
-.laikrodis .rodykle.valandos {
+.clock .hand.hour {
   width: 11px;
   height: 33%;
   background-color: black;
